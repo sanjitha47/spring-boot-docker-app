@@ -2,5 +2,5 @@ FROM openjdk:11
 MAINTAINER "Ashok"
 COPY target/spring-boot-docker-app.jar  /usr/app/
 WORKDIR /usr/app/
-EXPOSE 8080
+RUN sh -c 'touch spring-boot-docker-app.jar'
 ENTRYPOINT ["java", "-jar", "spring-boot-docker-app.jar"]
